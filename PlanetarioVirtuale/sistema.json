@@ -1,0 +1,61 @@
+{
+    "G": 6.67430e-11,
+    "durata_anni": 11.0,
+    "punti_simulazione": 15000,
+    "corpi": [
+        {
+            "nome": "Sole",
+            "massa": 1.989e30,
+            "posizione": [0, 0, 0],
+            "velocita": [0, 0, 0]
+        },
+        {
+            "nome": "Mercurio",
+            "massa": 3.285e23,
+            "posizione": [5.2728e10, 0, 0],
+            "velocita": [0, 47360, 0]
+        },
+        {
+            "nome": "Venere",
+            "massa": 4.867e24,
+            "posizione": [1.0888e11, 0, 0],
+            "velocita": [0, 35020, 0]
+        },
+        {
+            "nome": "Terra",
+            "massa": 5.972e24,
+            "posizione": [1.496e11, 0, 0],
+            "velocita": [0, 29780, 0]
+        },
+        {
+            "nome": "Marte",
+            "massa": 6.39e23,
+            "posizione": [2.279e11, 0, 0],
+            "velocita": [0, 24070, 0]
+        },
+        {
+            "nome": "Giove",
+            "massa": 1.898e27,
+            "posizione": [7.785e11, 0, 0],
+            "velocita": [0, 13070, 0]
+        },
+        {
+            "nome": "Saturno",
+            "massa": 5.683e26,
+            "posizione": [1.422e12, 0, 0],
+            "velocita": [0, 9672, 0]
+        },
+        {
+            "nome": "Urano",
+            "massa": 8.681e25,
+            "posizione": [2.871e12, 0, 0],
+            "velocita": [0, 6836, 0]
+        },
+        {
+            "nome": "Nettuno",
+            "massa": 1.024e26,
+            "posizione": [4.4702e12, 0, 0],
+            "velocita": [0, 5480, 0]
+        }
+    ]
+}

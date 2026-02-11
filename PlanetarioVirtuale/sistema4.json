@@ -1,0 +1,25 @@
+{
+    "G": 6.674e-11,
+    "durata_anni": 2.0,
+    "punti_simulazione": 30000,
+    "corpi": [
+        {
+            "nome": "Stella Centrale",
+            "massa": 1.989e30,
+            "posizione": [0, 0, 0],
+            "velocita": [0, 0, 0]
+        },
+        {
+            "nome": "Pianeta Interno",
+            "massa": 2.0e27,
+            "posizione": [1.0e11, 0, 0],
+            "velocita": [0, 36000, 0]
+        },
+        {
+            "nome": "Pianeta Esterno",
+            "massa": 4.0e27,
+            "posizione": [3.0e11, 0, 0],
+            "velocita": [0, 21000, 0]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "G": 6.674e-11,
+    "durata_anni": 0.5,
+    "punti_simulazione": 15000,
+    "corpi": [
+    {
+    "nome": "Stella",
+    "massa": 1.989e30,
+    "posizione": [0, 0, 0],
+    "velocita": [0, 0, 0]
+    },
+    {
+    "nome": "Pianeta Eccentrico",
+    "massa": 5.0e27,
+    "posizione": [1.5e11, 0, 0],
+    "velocita": [0, 15000, 0]
+    }
+    ]
+    }
+    

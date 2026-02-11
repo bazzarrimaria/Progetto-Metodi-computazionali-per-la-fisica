@@ -1,0 +1,19 @@
+{
+    "G": 6.674e-11,
+    "durata_anni": 0.1,
+    "punti_simulazione": 10000,
+    "corpi": [
+        {
+            "nome": "Stella tipo Sole",
+            "massa": 1.989e30,
+            "posizione": [0, 0, 0],
+            "velocita": [0, 0, 0]
+        },
+        {
+            "nome": "Giove Caldo",
+            "massa": 1.898e27,
+            "posizione": [7.48e9, 0, 0], 
+            "velocita": [0, 130000, 0]
+        }
+    ]
+}
