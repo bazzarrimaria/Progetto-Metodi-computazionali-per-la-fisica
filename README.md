@@ -19,9 +19,9 @@ Sistemi e Analisi Disponibili
 
 * Configurazione dei Sistemi (Input JSON)
   * [sistema.json](PlanetarioVirtuale/sistema.json) - Sistema Solare Interno (Benchmark stabilità)
-  * [sistema2.json](./sistema2.json) - Hot Jupiter (Analisi Spettroscopia Doppler)
-  * [sistema3.json](./sistema3.json) - Orbita Eccentrica (Leggi di Keplero)
-  * [sistema4.json](./sistema4.json) - Sistema N-Corpi Massicci (Interazioni reciproche)
+  * [sistema2.json](PlanetarioVirtuale/sistema2.json) - Hot Jupiter (Analisi Spettroscopia Doppler)
+  * [sistema3.json](PlanetarioVirtuale/sistema3.json) - Orbita Eccentrica (Leggi di Keplero)
+  * [sistema4.json](PlanetarioVirtuale/sistema4.json) - Sistema N-Corpi Massicci (Interazioni reciproche)
 
 * Metodologie Numeriche Implementate
   * **L04 / L08**: Integrazione tramite `scipy.integrate.odeint` (LSODA) e confronto con il metodo di Eulero.
