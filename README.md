@@ -4,7 +4,6 @@ Documentazione per il progetto finale del corso di "Metodi Computazionali per la
 per la Laurea Triennale in Fisica dell'Università degli Studi di Perugia.
 
 ## Descrizione del progetto
-=========================================
 
 Il progetto consiste nello sviluppo di un simulatore dinamico N-Corpi per lo studio numerico di sistemi planetari.
 
@@ -24,18 +23,16 @@ Lo script principale **[PlanetarioVirtuale.py](PlanetarioVirtuale/PlanetarioVirt
 Il programma supporta l'utilizzo di argomenti da riga di comando per personalizzare la simulazione tramite il modulo `argparse`.
 
 ## Modello Fisico
-=========================================
 
 Il sistema è descritto dall’equazione gravitazionale N-Corpi:
 
-$$m_i \ddot{\mathbf{r}}_i = \sum_{j \neq i} G \frac{m_i m_j}{|\mathbf{r}_{ij}|^3} \mathbf{r}_{ij}$$
+`$$ m_i \ddot{\mathbf{r}}_i = \sum_{j \neq i} G \frac{m_i m_j}{|\mathbf{r}_{ij}|^3} \mathbf{r}_{ij} $$`
 
 Le equazioni del moto sono integrate numericamente a partire da condizioni iniziali assegnate (posizioni e velocità).
 
 La velocità del centro di massa viene rimossa inizialmente per evitare drift globale del sistema.
 
 ## Metodi Numerici
-=========================================
 
   * LSODA (scipy.integrate.odeint)
   Metodo adattivo per l’integrazione delle ODE.
@@ -44,7 +41,6 @@ La velocità del centro di massa viene rimossa inizialmente per evitare drift gl
   Implementato per confronto della stabilità numerica.
 
 ## Analisi Energetica
-=========================================
 
 Per ogni simulazione viene calcolata:
 
@@ -53,12 +49,12 @@ Per ogni simulazione viene calcolata:
   * Energia meccanica totale
 
 Errore relativo:
-$$**\frac{|E(t) - E(0)|}{|E(0)|}**$$
+$$\frac{|E(t) - E(0)|}{|E(0)|}$$
 
 per confrontare la stabilità dei diversi metodi di integrazione.
 
 ## Tecnica della Velocità Radiale (Effetto Doppler)
-=========================================
+
 La velocità radiale della stella viene calcolata come: 
 
   * componente x della velocità della stella.
@@ -76,7 +72,6 @@ L’ampiezza del segnale *K* viene calcolata come semidifferenza tra valore mass
 $$K = \frac{v_{max} - v_{min}}{2}$$
 
 ## Configurazione dei Sistemi (Input JSON)
-=========================================
 
 Sono forniti diversi sistemi di test:
 
@@ -97,7 +92,6 @@ Sono forniti diversi sistemi di test:
 
 
 ## Output e Visualizzazioni
-=========================================
 
 Il programma fornisce:
 
@@ -112,25 +106,23 @@ Il progetto integra modellizzazione fisica, metodi numerici e visualizzazione gr
 
 
 ## Istruzioni per l'Esecuzione
-=========================================
 
 L'interfaccia a riga di comando permette i seguenti utilizzi:
 
 1. **Esecuzione standard**:
 
   ```bash
-   `$ python3 PlanetarioVirtuale.py sistema.json`
-
+    `$ python3 PlanetarioVirtuale.py sistema.json`
+  ```
 2. **Esecuzione con parametri personalizzati**:
 
   ```bash
    `$ python3 PlanetarioVirtuale.py sistema.json --tempo 5 --punti 50000`
-
+  ```
 3. **Modalità automatica (No-Menu)**:
 
   ```bash
    `$ python3 PlanetarioVirtuale.py sistema.json --no-menu`
+  ```
 
 
-
-=========================================
