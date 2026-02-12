@@ -26,7 +26,7 @@ Il programma supporta l'utilizzo di argomenti da riga di comando per personalizz
 
 Il sistema è descritto dall’equazione gravitazionale N-Corpi:
 
-`$$ m_i \ddot{\mathbf{r}}_i = \sum_{j \neq i} G \frac{m_i m_j}{|\mathbf{r}_{ij}|^3} \mathbf{r}_{ij} $$`
+$$m_i \ddot{\mathbf{r}}_i = \sum_{j \neq i} G \frac{m_i m_j}{|\mathbf{r}_{ij}|^3} \mathbf{r}_{ij}$$
 
 Le equazioni del moto sono integrate numericamente a partire da condizioni iniziali assegnate (posizioni e velocità).
 
@@ -112,17 +112,19 @@ L'interfaccia a riga di comando permette i seguenti utilizzi:
 1. **Esecuzione standard**:
 
   ```bash
-    `$ python3 PlanetarioVirtuale.py sistema.json`
+    $ python3 PlanetarioVirtuale.py sistema.json
   ```
+
 2. **Esecuzione con parametri personalizzati**:
 
   ```bash
-   `$ python3 PlanetarioVirtuale.py sistema.json --tempo 5 --punti 50000`
+   $ python3 PlanetarioVirtuale.py sistema.json --tempo 5 --punti 50000
   ```
+  
 3. **Modalità automatica (No-Menu)**:
 
   ```bash
-   `$ python3 PlanetarioVirtuale.py sistema.json --no-menu`
+   $ python3 PlanetarioVirtuale.py sistema.json --no-menu
   ```
 
 
