@@ -3,7 +3,7 @@
 Documentazione per il progetto finale del corso di "Metodi Computazionali per la Fisica" 
 per la Laurea Triennale in Fisica dell'Università degli Studi di Perugia.
 
-Descrizione del progetto
+## Descrizione del progetto
 =========================================
 
 Il progetto consiste nello sviluppo di un simulatore dinamico N-Corpi per lo studio numerico di sistemi planetari.
@@ -17,13 +17,13 @@ Il progetto consiste nello sviluppo di un simulatore dinamico N-Corpi per lo stu
 
 Il codice implementa un sistema configurabile tramite file JSON esterni, permettendo la simulazione di sistemi planetari generici.
 
-Lo script principale `[PlanetarioVirtuale.py](PlanetarioVirtuale/PlanetarioVirtuale.py)` può essere eseguito da terminale tramite l'interprete Python:
-
+Lo script principale **[PlanetarioVirtuale.py](PlanetarioVirtuale/PlanetarioVirtuale.py)** può essere eseguito da terminale tramite l'interprete Python:
+  ```bash
     $ python3 PlanetarioVirtuale.py nome-file-sistema.json
-
+  ```
 Il programma supporta l'utilizzo di argomenti da riga di comando per personalizzare la simulazione tramite il modulo `argparse`.
 
-Modello Fisico
+## Modello Fisico
 =========================================
 
 Il sistema è descritto dall’equazione gravitazionale N-Corpi:
@@ -34,7 +34,7 @@ Le equazioni del moto sono integrate numericamente a partire da condizioni inizi
 
 La velocità del centro di massa viene rimossa inizialmente per evitare drift globale del sistema.
 
-Metodi Numerici
+## Metodi Numerici
 =========================================
 
   * LSODA (scipy.integrate.odeint)
@@ -43,7 +43,7 @@ Metodi Numerici
   * Metodo di Eulero esplicito (confronto stabilità)
   Implementato per confronto della stabilità numerica.
 
-Analisi Energetica
+## Analisi Energetica
 =========================================
 
 Per ogni simulazione viene calcolata:
@@ -53,13 +53,14 @@ Per ogni simulazione viene calcolata:
   * Energia meccanica totale
 
 Errore relativo:
-$$\frac{|E(t) - E(0)|}{|E(0)|}$$
+$$**\frac{|E(t) - E(0)|}{|E(0)|}**$$
 
 per confrontare la stabilità dei diversi metodi di integrazione.
 
-Tecnica della Velocità Radiale (Effetto Doppler)
+## Tecnica della Velocità Radiale (Effetto Doppler)
 =========================================
 La velocità radiale della stella viene calcolata come: 
+
   * componente x della velocità della stella.
 
 Ipotesi modellistiche:
@@ -74,7 +75,7 @@ L’ampiezza del segnale *K* viene calcolata come semidifferenza tra valore mass
 
 $$K = \frac{v_{max} - v_{min}}{2}$$
 
-Configurazione dei Sistemi (Input JSON)
+## Configurazione dei Sistemi (Input JSON)
 =========================================
 
 Sono forniti diversi sistemi di test:
@@ -85,19 +86,21 @@ Sono forniti diversi sistemi di test:
   * [sistema3.json](PlanetarioVirtuale/sistema3.json) - Orbita Eccentrica (Leggi di Keplero)
   * [sistema4.json](PlanetarioVirtuale/sistema4.json) - Sistema N-Corpi Massicci (Interazioni reciproche)
 
-Ogni file JSON contiene:
-  * costante gravitazionale
-  * masse
-  * posizioni iniziali
-  * velocità iniziali
-  * durata della simulazione
-  * numero di punti temporali
+  Ogni file JSON contiene:
+
+    * costante gravitazionale
+    * masse
+    * posizioni iniziali
+    * velocità iniziali
+    * durata della simulazione
+    * numero di punti temporali
 
 
-Output e Visualizzazioni
+## Output e Visualizzazioni
 =========================================
 
 Il programma fornisce:
+
   * Traiettorie orbitali nel piano XY
   * Analisi dell’energia totale
   * Andamento della velocità scalare
@@ -108,18 +111,24 @@ Il programma fornisce:
 Il progetto integra modellizzazione fisica, metodi numerici e visualizzazione grafica in un’unica applicazione modulare e configurabile.
 
 
-Istruzioni per l'Esecuzione
+## Istruzioni per l'Esecuzione
 =========================================
 
 L'interfaccia a riga di comando permette i seguenti utilizzi:
 
 1. **Esecuzione standard**:
+
+  ```bash
    `$ python3 PlanetarioVirtuale.py sistema.json`
 
 2. **Esecuzione con parametri personalizzati**:
+
+  ```bash
    `$ python3 PlanetarioVirtuale.py sistema.json --tempo 5 --punti 50000`
 
 3. **Modalità automatica (No-Menu)**:
+
+  ```bash
    `$ python3 PlanetarioVirtuale.py sistema.json --no-menu`
 
 
